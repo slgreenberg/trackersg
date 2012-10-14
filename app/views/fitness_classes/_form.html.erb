@@ -1,0 +1,29 @@
+<%= form_for(@fitness_class) do |f| %>
+  <% if @fitness_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fitness_class.errors.count, "error") %> prohibited this fitness_class from being saved:</h2>
+
+      <ul>
+      <% @fitness_class.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :equipment_user %><br />
+    <%= f.check_box :equipment_user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

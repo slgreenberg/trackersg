@@ -1,0 +1,27 @@
+<h1>Listing fitness_classes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration</th>
+    <th>Equipment user</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fitness_classes.each do |fitness_class| %>
+  <tr>
+    <td><%= fitness_class.name %></td>
+    <td><%= fitness_class.duration %></td>
+    <td><%= fitness_class.equipment_user %></td>
+    <td><%= link_to 'Show', fitness_class %></td>
+    <td><%= link_to 'Edit', edit_fitness_class_path(fitness_class) %></td>
+    <td><%= link_to 'Destroy', fitness_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fitness class', new_fitness_class_path %>

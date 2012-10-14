@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name,:</b>
+  <%= @fitness_class.name %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @fitness_class.duration %>
+</p>
+
+<p>
+  <b>Equipment user:</b>
+  <%= @fitness_class.equipment_user %>
+</p>
+
+
+<%= link_to 'Edit', edit_fitness_class_path(@fitness_class) %> |
+<%= link_to 'Back', fitness_classes_path %>
