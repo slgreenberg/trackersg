@@ -5,4 +5,5 @@ class Workout < ActiveRecord::Base
   def user_name
     user.name if user
   end
+  
 end

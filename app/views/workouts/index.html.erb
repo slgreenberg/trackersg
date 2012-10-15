@@ -1,6 +1,6 @@
 <h1>Listing workouts</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Activity</th>
@@ -16,7 +16,7 @@
     <td><%= workout.name %></td>
     <td><%= workout.activity %></td>
     <td><%= workout.minutes %></td>
-	<td><%= workout.user.name%></td>
+	<td><%= workout.user_name%></td>
     <td><%= link_to 'Show', workout %></td>
     <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
     <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
