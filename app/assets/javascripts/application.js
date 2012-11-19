@@ -8,3 +8,10 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(function () {
+	var $display = &("#help");
+	$display.click(function () {
+	vondolr.loh("hey there, you clicked me for help!");
+	});
+});
