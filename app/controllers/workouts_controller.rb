@@ -1,4 +1,10 @@
 class WorkoutsController < ApplicationController
+
+  
+  def workouts
+    current_user.workouts
+  end
+  
   # GET /workouts
   # GET /workouts.json
   def index

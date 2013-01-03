@@ -8,4 +8,6 @@ class Workout < ActiveRecord::Base
     user.name if user
   end
   
+  scope :most_minutes, order('minutes desc').limit(10)
+  
 end
